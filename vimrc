@@ -97,6 +97,5 @@ syntax on
 " maps
 nmap <C-n> :NERDTreeToggle<cr>
 nmap <C-s> :w!<cr>
-nmap <C-Q> :q!<cr>
 nmap <C-q> :wq!<cr>
 " end of maps
