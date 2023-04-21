@@ -224,3 +224,8 @@ nmap <C-n> :NERDTreeToggle<cr>
 nmap <C-s> :w!<cr>
 nmap <C-q> :wq!<cr>
 " end of maps
+
+" about buffer
+nmap <C-p> :bprevious<cr>
+nmap <C-u> :bnext<cr>
+" end of buffer
