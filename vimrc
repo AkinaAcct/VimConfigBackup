@@ -11,7 +11,7 @@ endif
 
 " using Vim-Plug
 call plug#begin()
-Plug 'drewtempelmeyer/palenight.vim'
+Plug 'ghifarit53/tokyonight-vim'
 Plug 'preservim/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -19,7 +19,6 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
 " Coc.nvim Config(from official)
-let g:coc_disable_startup_warning=1
 " May need for Vim (not Neovim) since coc.nvim calculates byte offset by count
 " utf-8 byte sequence
 set encoding=utf-8
@@ -192,7 +191,7 @@ let g:airline#extensions#tabline#buffer_nr_format='%s:'
 let g:airline#extensions#battery#enabled=1
 let g:airline_left_sep = ''
 let g:airline_left_alt_sep = ''
-let g:airline_theme = "palenight"
+let g:airline_theme = "tokyonight"
 " end of config
 
 " normal config
@@ -213,16 +212,16 @@ set shiftwidth=4
 set laststatus=2
 set undofile
 set undodir=~/.vim/undofiles// 
-set background=dark
-colorscheme palenight
+set termguicolors
+let g:tokyonight_style = 'night' " available: night, storm
+let g:tokyonight_enable_italic = 1
+colorscheme tokyonight
 filetype indent on
 syntax on
 " end of normal config
 
 " maps
 nmap <C-n> :NERDTreeToggle<cr>
-nmap <C-s> :w!<cr>
-nmap <C-q> :wq!<cr>
 " end of maps
 
 " about buffer
