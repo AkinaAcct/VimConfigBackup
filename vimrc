@@ -1,4 +1,5 @@
 set nocompatible
+let mapleader=","
 
 "auto installation of vim-plug(from official)
 let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
@@ -210,7 +211,6 @@ set softtabstop=4
 set tabstop=4
 set shiftwidth=4
 set laststatus=2
-set nobackup
 set undofile
 set undodir=~/.vim/undofiles// 
 set background=dark
