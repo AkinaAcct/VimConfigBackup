@@ -11,6 +11,8 @@ endif
 
 " using Vim-Plug
 call plug#begin()
+Plug 'rhysd/git-messenger.vim'
+Plug 'sheerun/vim-polyglot'
 Plug 'ghifarit53/tokyonight-vim'
 Plug 'preservim/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'vim-airline/vim-airline'
@@ -222,6 +224,7 @@ syntax on
 
 " maps
 nmap <C-n> :NERDTreeToggle<cr>
+nmap gm <Plug>(git-messenger)
 " end of maps
 
 " about buffer
