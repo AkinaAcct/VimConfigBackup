@@ -11,6 +11,7 @@ endif
 
 " using Vim-Plug
 call plug#begin()
+Plug 'mhinz/vim-startify'
 Plug 'rhysd/git-messenger.vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'ghifarit53/tokyonight-vim'
