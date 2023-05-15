@@ -1,16 +1,9 @@
 set nocompatible
 let mapleader=","
 
-"auto installation of vim-plug(from official)
-let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
-if empty(glob(data_dir . '/autoload/plug.vim'))
-  silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
-  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
-endif
-"end of script
-
 " using Vim-Plug
 call plug#begin('~/.nvim/plugged')
+Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 Plug 'mhinz/vim-startify'
 Plug 'rhysd/git-messenger.vim'
 Plug 'sheerun/vim-polyglot'
@@ -22,6 +15,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
 " Coc.nvim Config(from official)
+
 " May need for Vim (not Neovim) since coc.nvim calculates byte offset by count
 " utf-8 byte sequence
 set encoding=utf-8
@@ -111,7 +105,7 @@ xmap <leader>a  <Plug>(coc-codeaction-selected)
 nmap <leader>a  <Plug>(coc-codeaction-selected)
 
 " Remap keys for applying code actions at the cursor position
-    nmap <leader>ac  <Plug>(coc-codeaction-cursor)
+nmap <leader>ac  <Plug>(coc-codeaction-cursor)
 " Remap keys for apply code actions affect whole buffer
 nmap <leader>as  <Plug>(coc-codeaction-source)
 " Apply the most preferred quickfix action to fix diagnostic on the current line
@@ -216,9 +210,11 @@ set laststatus=2
 set undofile
 set undodir=~/.vim/undofiles// 
 set termguicolors
-let g:tokyonight_style = 'night' " available: night, storm
-let g:tokyonight_enable_italic = 1
-colorscheme tokyonight
+" let g:tokyonight_style = 'night' " available: night, storm
+" let g:tokyonight_enable_italic = 1
+
+colorscheme tokyonight-storm
+
 filetype indent on
 syntax on
 " end of normal config
