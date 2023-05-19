@@ -3,13 +3,15 @@ let mapleader=","
 
 " using Vim-Plug
 call plug#begin('~/.nvim/plugged')
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 Plug 'mhinz/vim-startify'
 Plug 'rhysd/git-messenger.vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'ghifarit53/tokyonight-vim'
 Plug 'preservim/nerdtree', { 'on': 'NERDTreeToggle' }
-Plug 'itchyny/lightline.vim'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
@@ -177,8 +179,17 @@ nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 " end of config
 
-" config of vim-lightline
-let g:lightline = {'colorscheme': 'tokyonight'}
+" config of vim-airline
+let g:airline#extensions#tabline#enabled=1
+let g:airline#extensions#tabline#left_sep=''
+let g:airline#extensions#tabline#left_alt_sep=''
+let g:airline#extensions#tabline#formatter='unique_tail'
+let g:airline#extensions#tabline#buffer_nr_show=1
+let g:airline#extensions#tabline#buffer_nr_format='%s:'
+let g:airline#extensions#battery#enabled=1
+let g:airline_left_sep = ''
+let g:airline_left_alt_sep = ''
+let g:airline_theme = "tokyonight"
 " end of config
 
 " normal config
@@ -200,6 +211,8 @@ set laststatus=2
 set undofile
 set undodir=~/.vim/undofiles// 
 set termguicolors
+" let g:tokyonight_style = 'night' " available: night, storm
+" let g:tokyonight_enable_italic = 1
 
 colorscheme tokyonight-storm
 
