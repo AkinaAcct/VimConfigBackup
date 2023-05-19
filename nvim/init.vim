@@ -201,7 +201,7 @@ set undofile
 set undodir=~/.vim/undofiles// 
 set termguicolors
 
-colorscheme tokyonight-day
+colorscheme tokyonight-storm
 
 filetype indent on
 syntax on
