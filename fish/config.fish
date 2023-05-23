@@ -3,6 +3,7 @@ if status is-interactive
 end
 function fish_greeting
 end
+alias gcl "git clone"
 alias g "git"
 alias ga "git add"
 alias gaa "git add --all"
