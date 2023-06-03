@@ -2,7 +2,11 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
 end
 function fish_greeting
+    set LOCALUSER (whoami)
+    echo "Welcome to ArchLinux!Login as $LOCALUSER"
 end
+export EDITOR="nvim"
+alias gpl "git pull --ff-only"
 alias gcl "git clone"
 alias g "git"
 alias ga "git add"
