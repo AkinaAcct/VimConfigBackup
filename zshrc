@@ -47,7 +47,7 @@ source ${HOME}/.zinit/bin/zinit.zsh
 load_omz_lib
 ########
 # THEME
-zinit light ${ZINIT_THEME_DIR}/fishbone++
+zinit light ${ZINIT_THEME_DIR}/pure
 # theme-and-appearance的加载顺序要先于主题,请在load_omz_lib之后加载主题。
 skip_global_compinit=1
 load_zinit_compinit_function
