@@ -74,10 +74,10 @@ zinit ice lucid wait="2" pick"sudo.plugin.zsh" && zinit light _local/sudo #Easil
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh # powerlevel10k的prompt
 #######
 # ALIASES
-alias ...=../..
-alias ....=../../..
-alias .....=../../../..
-alias ......=../../../../..
+alias ...=cd ../..
+alias ....=cd ../../..
+alias .....=cd ../../../..
+alias ......=cd ../../../../..
 alias 1='cd -'
 alias 2='cd -2'
 alias 3='cd -3'
@@ -97,6 +97,10 @@ alias gp='git push'
 alias gc='git commit --verbose'
 alias gd='git describe'
 alias gdt='gd --tags'
+alias ga="git add"
+alias gaa="git add --all"
+alias gcl="git clone"
+alias gpl="git pull --ff-only"
 alias gpl='git pull --ff-only'
 if command -v onefetch > /dev/null 2>&1;then
     alias gdo='onefetch'
@@ -121,13 +125,13 @@ if [[ $(command -v exa) ]] {
     [[ -n ${LS_BIN_FILE} ]] || local LS_BIN_FILE=$(whereis ls 2>/dev/null | awk '{print $2}')
     alias lls=${LS_BIN_FILE} 
     # lls is the original ls. lls为原版ls
-    alias ls="exa --color=auto" 
+    alias ls="exa -s type --color=auto" 
     # Exa is a modern version of ls. exa是一款优秀的ls替代品,拥有更好的文件展示体验,输出结果更快,使用rust编写。
-    alias l='exa -lbah --icons'
-    alias la='exa -labgh --icons'
-    alias ll='exa -lbg --icons'
-    alias lsa='exa -lbagR --icons'
-    alias lst='exa -lTabgh --icons' # 输入lst,将展示类似于tree的树状列表。
+    alias l='exa -lbahs type --icons'
+    alias la='exa -labghs type --icons'
+    alias ll='exa -lbgs type --icons'
+    alias lsa='exa -lbagRs type --icons'
+    alias lst='exa -lTabghs type --icons' # 输入lst,将展示类似于tree的树状列表。
 } else {
     alias ls='ls --color=auto'
     # color should not be always.
