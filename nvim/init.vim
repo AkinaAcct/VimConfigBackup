@@ -4,6 +4,8 @@ let mapleader=","
 " using Vim-Plug
 call plug#begin('~/.nvim/plugged')
 Plug 'williamboman/mason.nvim', { 'do': ':MasonUpdate' }
+Plug 'williamboman/mason-lspconfig.nvim'
+Plug 'neovim/nvim-lspconfig'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 Plug 'mhinz/vim-startify'
