@@ -12,6 +12,7 @@ end
 local packer_bootstrap = ensure_packer()
 
 return require('packer').startup(function(use)
+  use {'nvim-lualine/lualine.nvim', requires = { 'nvim-tree/nvim-web-devicons', opt = true }}
   use {'wbthomason/packer.nvim'}
   use {"williamboman/mason.nvim", run = ":MasonUpdate"}
   use {'williamboman/mason-lspconfig.nvim'}
