@@ -7,6 +7,8 @@ local opts = {
 -----------------
 -- Normal mode --
 -----------------
+--show nvim-tree
+vim.keymap.set('n', '<C-n>', ':NvimTreeToggle<CR>', opts)
 
 -- Hint: see `:h vim.map.set()`
 -- Better window navigation
