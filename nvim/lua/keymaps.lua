@@ -7,6 +7,11 @@ local opts = {
 -----------------
 -- Normal mode --
 -----------------
+
+---buffer
+vim.keymap.set('n', '<M-h>', ':bprevious<CR>', opts)
+vim.keymap.set('n', '<M-l>', ':bnext<CR>', opts)
+
 --show nvim-tree
 vim.keymap.set('n', '<C-n>', ':NvimTreeToggle<CR>', opts)
 
@@ -28,7 +33,7 @@ vim.keymap.set('n', '<C-Right>', ':vertical resize +2<CR>', opts)
 -- Visual mode --
 -----------------
 
-    -- Hint: start visual mode with the same area as the previous area and the same mode
+-- Hint: start visual mode with the same area as the previous area and the same mode
 vim.keymap.set('v', '<', '<gv', opts)
 vim.keymap.set('v', '>', '>gv', opts)
 
