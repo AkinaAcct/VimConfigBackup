@@ -16,7 +16,7 @@ return require('packer').startup(function(use)
   use {'nvim-lualine/lualine.nvim'}
   use {'nvim-tree/nvim-tree.lua'}
   use {'nvim-tree/nvim-web-devicons', opt = true }
-  use {'williamboman/mason.nvim', run = ':MasonUpdate'}
+  use {'williamboman/mason.nvim'}
   use {'williamboman/mason-lspconfig.nvim'}
   use {'neovim/nvim-lspconfig'}
   use {'neoclide/coc.nvim', branch = 'release'}
