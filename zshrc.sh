@@ -131,7 +131,7 @@ if [[ $(command -v exa) ]] {
     alias la='exa -labghs type --icons'
     alias ll='exa -lbgs type --icons'
     alias lsa='exa -lbagRs type --icons'
-    alias lst='exa -lTabghs type --icons' # 输入lst,将展示类似于tree的树状列表。
+    alias lst='exa -lTabghs type -I .git --icons' # 输入lst,将展示类似于tree的树状列表。
 } else {
     alias ls='ls --color=auto'
     # color should not be always.
