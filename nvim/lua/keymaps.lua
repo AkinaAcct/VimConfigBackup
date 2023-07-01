@@ -29,6 +29,12 @@ vim.keymap.set('n', '<C-Down>', ':resize +2<CR>', opts)
 vim.keymap.set('n', '<C-Left>', ':vertical resize -2<CR>', opts)
 vim.keymap.set('n', '<C-Right>', ':vertical resize +2<CR>', opts)
 
+-- Another
+vim.keymap.set('n', '<A-q>', ':q!<CR>', opts)
+vim.keymap.set('n', '<A-w>', ':w!<CR>', opts)
+vim.keymap.set('n', '<A-w-q>', ':wq!<CR>', opts)
+
+
 -----------------
 -- Visual mode --
 -----------------
