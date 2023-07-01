@@ -13,6 +13,7 @@ local packer_bootstrap = ensure_packer()
 
 return require('packer').startup(function(use)
   use {'wbthomason/packer.nvim'}
+  -----------------------------------
   use {'nvim-lualine/lualine.nvim'}
   use {'nvim-tree/nvim-tree.lua'}
   use {'nvim-tree/nvim-web-devicons', opt = true }
@@ -20,6 +21,7 @@ return require('packer').startup(function(use)
   use {'williamboman/mason-lspconfig.nvim'}
   use {'neovim/nvim-lspconfig'}
   use {'neoclide/coc.nvim', branch = 'release'}
+  use {'akinsho/bufferline.nvim', tag = "*",}
   -- colorscheme
   use {'folke/tokyonight.nvim'}
     -- Automatically set up your configuration after cloning packer.nvim
