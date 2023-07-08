@@ -1,9 +1,10 @@
 require('options')
-require('keymaps')
 require('plugins')
 require('colorscheme')
 -- plugin configs
-require('plugin-cfg/coc')
+require('lsp/lsp-cmp')
 require('plugin-cfg/lualine')
 require('plugin-cfg/nvim-tree')
 require('plugin-cfg/bufferline')
+-- keymaps
+require('keymaps')
