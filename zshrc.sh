@@ -74,10 +74,11 @@ zinit ice lucid wait="2" pick"sudo.plugin.zsh" && zinit light _local/sudo #Easil
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh # powerlevel10k的prompt
 #######
 # ALIASES
-alias ...=cd ../..
-alias ....=cd ../../..
-alias .....=cd ../../../..
-alias ......=cd ../../../../..
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+alias ......="cd ../../../../.."
 alias 1='cd -'
 alias 2='cd -2'
 alias 3='cd -3'
@@ -101,7 +102,6 @@ alias ga="git add"
 alias gaa="git add --all"
 alias gcl="git clone"
 alias gpl="git pull --ff-only"
-alias gpl='git pull --ff-only'
 if command -v onefetch > /dev/null 2>&1;then
     alias gdo='onefetch'
 fi
